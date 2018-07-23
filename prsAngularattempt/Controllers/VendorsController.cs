@@ -81,6 +81,22 @@ namespace prsAngularattempt.Controllers
 			db.SaveChanges();
 			return new JsonResponse();
 		}
+		[HttpGet]
+		[ActionName("getproducts")]
+		public JsonResponse getProducts(Vendor vendor)
+		{
+			 if (vendor == null)
+					return new JsonResponse { Error = "-2", Message = "the vendor is null", Result = "failed" };
+			if (!ModelState.IsValid)
+				return new JsonResponse { Error = "-2", Message = "the vendor is invalid", Result = "failed" };
+			List<Product> products = db.Products.ToList();
+			List<Product> vendorp = new List<Product>();
+			foreach (Product pro in products) {
+				if (vendor.Id == pro.VendorId)
+					vendorp.Add(pro);
+			}
+			return new JsonResponse { Data = vendorp };
 
-    }
+		}
+	}
 }
