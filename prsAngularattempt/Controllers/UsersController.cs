@@ -4,18 +4,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using prsAngularattempt.Models;
 using prsAngularattempt.Utility;
 
 namespace prsAngularattempt.Controllers
 {
-    public class UsersController : ApiController
+	[EnableCors(origins: "*", headers: "*", methods: "*")]
+	public class UsersController : ApiController
     {
 		private prscontext db = new prscontext();
 
 		[HttpGet]
-		[ActionName("Get")]
-		public JsonResponse Get(int? id)
+		[ActionName("get")]
+		public JsonResponse get(int? id)
 		{
 			if (id == null)
 				return new JsonResponse { Error = "-2", Message = "the id is no longer available", Result = "Failed" };
