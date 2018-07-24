@@ -201,6 +201,10 @@
     <Compile Include="Migrations\201807201717536_intial migration.Designer.cs">
       <DependentUpon>201807201717536_intial migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807240240036_created three controllers.cs" />
+    <Compile Include="Migrations\201807240240036_created three controllers.Designer.cs">
+      <DependentUpon>201807240240036_created three controllers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\prscontext.cs" />
@@ -300,6 +304,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807201717536_intial migration.resx">
       <DependentUpon>201807201717536_intial migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240240036_created three controllers.resx">
+      <DependentUpon>201807240240036_created three controllers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
