@@ -14,6 +14,8 @@ namespace prsAngularattempt.Models
 		public DbSet<User> Users { get; set; }
 		public DbSet<Vendor> Vendors { get; set; }
 		public DbSet<Product> Products { get; set; }
+		public DbSet<PurchaseRequest> Requests { get; set; }
+		public DbSet<PurchaseRequestLine> PurchaseLines { get; set; }
 
 	}
 }

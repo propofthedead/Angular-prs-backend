@@ -197,6 +197,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\PurchaseRequestsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\VendorsController.cs" />
@@ -210,6 +211,10 @@
     <Compile Include="Migrations\201807240240036_created three controllers.cs" />
     <Compile Include="Migrations\201807240240036_created three controllers.Designer.cs">
       <DependentUpon>201807240240036_created three controllers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807250451586_added more controllers.cs" />
+    <Compile Include="Migrations\201807250451586_added more controllers.Designer.cs">
+      <DependentUpon>201807250451586_added more controllers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Product.cs" />
@@ -313,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807240240036_created three controllers.resx">
       <DependentUpon>201807240240036_created three controllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807250451586_added more controllers.resx">
+      <DependentUpon>201807250451586_added more controllers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
