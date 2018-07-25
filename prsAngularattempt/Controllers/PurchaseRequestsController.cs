@@ -72,5 +72,19 @@ namespace prsAngularattempt.Controllers
 			db.SaveChanges();
 			return new JsonResponse();
 		}
+
+		[HttpPost]
+		[ActionName("delete")]
+		public JsonResponse delete(PurchaseRequest request)
+		{
+			if (request == null)
+				return new JsonResponse { Error = "-3", Message = "The request is nullable", Result = "Failed" };
+			if (!ModelState.IsValid)
+				return new JsonResponse { Error = "-4", Message = "The object is not a request", Result = "failed" };
+			var r = db.Requests.Find(request.Id);
+			db.Requests.Remove(r);
+			db.SaveChanges();
+			return new JsonResponse();
+		}
     }
 }
