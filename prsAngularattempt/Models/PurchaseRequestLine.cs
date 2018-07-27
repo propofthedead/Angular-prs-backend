@@ -12,7 +12,8 @@ namespace prsAngularattempt.Models
 		public virtual PurchaseRequest PurchaseRequest { get; set; }
 		public int Quantity { get; set; }
 		public double Price { get; set; }
-
+		public int ProductId { get; set; }
+		public virtual Product Product { get; set; }
 		public PurchaseRequestLine() { }
 	}
 }
