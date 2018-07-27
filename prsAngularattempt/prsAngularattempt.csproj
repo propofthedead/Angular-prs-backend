@@ -196,6 +196,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LinesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\PurchaseRequestsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -215,6 +216,10 @@
     <Compile Include="Migrations\201807250451586_added more controllers.cs" />
     <Compile Include="Migrations\201807250451586_added more controllers.Designer.cs">
       <DependentUpon>201807250451586_added more controllers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807271910310_updated.cs" />
+    <Compile Include="Migrations\201807271910310_updated.Designer.cs">
+      <DependentUpon>201807271910310_updated.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Product.cs" />
@@ -321,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807250451586_added more controllers.resx">
       <DependentUpon>201807250451586_added more controllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807271910310_updated.resx">
+      <DependentUpon>201807271910310_updated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
