@@ -16,7 +16,7 @@ namespace prsAngularattempt.Models
 		public double Price { get; set; }
 		public virtual User User { get; set; }
 		public int UserId { get; set; }
-
+		public virtual List<PurchaseRequestLine> PurchaseRequestLines { get; set; }
 		public PurchaseRequest() { }
 	}
 }
