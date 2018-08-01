@@ -19,6 +19,11 @@ namespace prsAngularattempt
 				defaults: new { id = RouteParameter.Optional }
 			);
 			config.Routes.MapHttpRoute(
+				name: "Authentication",
+				routeTemplate: "{controller}/{action}/{username}/{password}",
+				defaults: new { id = RouteParameter.Optional }
+				);
+			config.Routes.MapHttpRoute(
 				name: "DefaultApi",
 				routeTemplate: "api/{controller}/{id}",
 				defaults: new { id = RouteParameter.Optional }
