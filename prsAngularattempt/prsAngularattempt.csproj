@@ -221,6 +221,10 @@
     <Compile Include="Migrations\201807271910310_updated.Designer.cs">
       <DependentUpon>201807271910310_updated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808011324452_update.cs" />
+    <Compile Include="Migrations\201808011324452_update.Designer.cs">
+      <DependentUpon>201808011324452_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\prscontext.cs" />
@@ -329,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807271910310_updated.resx">
       <DependentUpon>201807271910310_updated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808011324452_update.resx">
+      <DependentUpon>201808011324452_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -82,7 +82,7 @@ namespace prsAngularattempt.Controllers
 		}
 		[HttpGet]
 		[ActionName("authenticate")]
-		public JsonResponse login(string password, string username)
+		public JsonResponse authenticate(string username, string password)
 		{
 			if (password == null || username == null)
 				return new JsonResponse { Error = "-3", Message = "the username or password is wrong", Result = "Failed" };

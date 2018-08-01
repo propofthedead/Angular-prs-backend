@@ -10,7 +10,7 @@ namespace prsAngularattempt.Models
 		public int Id { get; set; }
 		public string Description { get; set; }
 		public string Justification { get; set; }
-		public string RejectReason { get; set; }
+		public string RejectReason { get; set; } = "New";
 		public string DeliviryMode { get; set; }
 		public string Status { get; set; }
 		public double Price { get; set; }
