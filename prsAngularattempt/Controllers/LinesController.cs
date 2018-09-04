@@ -44,8 +44,19 @@ namespace prsAngularattempt.Controllers
 			if (!ModelState.IsValid)
 				return new JsonResponse { Error = "-3", Message = "the item is not valid", Result = "Failed" };
 			db.PurchaseLines.Add(line);
+			Add(line);
 			db.SaveChanges();
 			return new JsonResponse();
+		}
+		public void Add(PurchaseRequestLine line) {
+			PurchaseRequest request = db.Requests.Find(line.PurchaseRequestId);
+			request.Price = 0;
+			List<PurchaseRequestLine> lines = db.PurchaseLines.ToList();
+			foreach(PurchaseRequestLine item in lines) {
+				if (item.PurchaseRequestId == request.Id) {
+					request.Price += item.Price;
+				}
+			}
 		}
 
 		[HttpPost]
@@ -64,6 +75,7 @@ namespace prsAngularattempt.Controllers
 			l.PurchaseRequestId = line.PurchaseRequestId;
 			l.Quantity = line.Quantity;
 			db.SaveChanges();
+			Add(l);
 			return new JsonResponse();
 		}
 
@@ -76,6 +88,8 @@ namespace prsAngularattempt.Controllers
 			if (!ModelState.IsValid)
 				return new JsonResponse { Error = "-3", Message = "the item is not valid", Result = "Failed" };
 			PurchaseRequestLine l = db.PurchaseLines.Find(line.Id);
+			PurchaseRequest request = db.Requests.Find(l.PurchaseRequestId);
+			request.Price -= l.Price;
 			db.PurchaseLines.Remove(l);
 			db.SaveChanges();
 			return new JsonResponse();
